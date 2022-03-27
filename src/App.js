@@ -1,11 +1,16 @@
-
-import './App.css';
+import Dash from './components/Dash/Dash';
+import Nav from './components/Nav/Nav';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route exact from='/' to={Dash}/>
+      </Switch>
+    </Router>
   );
 }
 

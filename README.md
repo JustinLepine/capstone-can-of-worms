@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Can of Worms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my react Capstone project for BrainStation a fishing guide to help new fishermen learn basic essitials to help fish efficiently.
 
 ## Available Scripts
 
