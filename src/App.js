@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Nav />
       <Switch>
-        <Route exact from='/' to={Dash}/>
+        <Route path='/' exact component={Dash}/>
       </Switch>
     </Router>
   );
