@@ -66,16 +66,33 @@
     flex-wrap: wrap;
     justify-content: center;
 
+    @include tablet {
+        margin-left: 14.5%;
+        margin-right: 14.5%;
+    }
+
+    @include desktop {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
     &__button {
         background-color: $sage;
         box-shadow: 8px 8px 10px $graphite;
-        margin: 2rem;
         display: flex;
         flex-direction: column;
         width: 10rem;
         border-radius: 25px;
         justify-content: flex-end;
         padding: 1.5rem;
+        height: 14rem;
+    }
+    
+    &__link {        
+        margin: 2rem;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
     }
 
     &__icon {
@@ -83,6 +100,7 @@
     }
 
     &__subtitles {
+        color: $graphite;
         font-size: 1.5rem;
         text-align: center;
         margin: 1rem 0 0;
