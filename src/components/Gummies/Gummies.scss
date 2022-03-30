@@ -1,39 +1,5 @@
-@use "../../styles/colors" as *;
+@use "../../styles/mixins" as *;
 
 .gummies {
-    color: $graphite;
-    margin: 2rem 5rem;
-
-    &__top {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    &__icon {
-        height: 5rem;
-    }
-
-    &__title {
-        font-size: 3rem;
-    }
-    
-    &__inv {
-        width: 100%;
-    }
-
-    &__subtitles {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        padding: 0;
-        border-top: 1px solid $graphite;
-        padding-top: 1rem;
-        margin-top: 0;
-    }
+    @include details-styles 
 }
