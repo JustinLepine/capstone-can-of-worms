@@ -4,7 +4,6 @@ import Crankbait from "../../assets/icons/crankbait.svg";
 import Gummy from "../../assets/icons/gummy_icon.svg";
 import Frog from "../../assets/icons/frog.svg";
 import Popper from "../../assets/icons/popper.svg";
-
 import "./Lures.scss";
 
 function Lures() {

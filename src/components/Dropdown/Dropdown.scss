@@ -1,0 +1,21 @@
+@use "../../styles/colors" as *;
+
+.dropdown {
+    width: 6rem;
+
+    color: $graphite;
+    position: absolute;
+    top: 5.1rem;
+    right: 1rem;
+    list-style: none;
+    text-align: start;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: $sage;
+
+    & a {
+        text-decoration: none;
+        color: $graphite;
+    }
+}

@@ -14,8 +14,13 @@
         height: 3.4rem;
         margin: 0.2rem;
     }    
-    
+
+    &__drop-icon {
+        height: 2rem;
+        list-style: none;
+    }
+
     &__drop {
-        margin: 0.5rem;
+        height: 3rem;
     }
 }
