@@ -6,17 +6,11 @@ import "./Nav.scss";
 import { Link } from "react-router-dom";
 
 function Nav() {
-  const [dropdown, setDropdown] = useState(false);
+  const [showDrop, setShowDrop] = useState(false);
 
-  const onMouseEnter = () => {
-    setDropdown(true);
-  };
-
-  const onMouseLeave = () => {
-    setTimeout(function () {
-      setDropdown(false);
-    }, 2300);
-  };
+  const onClick = () => {
+    setShowDrop(!showDrop)
+  }
 
   return (
     <nav className="nav">
@@ -25,11 +19,10 @@ function Nav() {
       </Link>
       <div
         className="nav__drop-icon"
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
+        onClick={onClick}
       >
         <img className="nav__drop" src={Drop} alt="drop"></img>
-        {dropdown && <Dropdown />}
+        {showDrop && <Dropdown />}
       </div>
     </nav>
   );
