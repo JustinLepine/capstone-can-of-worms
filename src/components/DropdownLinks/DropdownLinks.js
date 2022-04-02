@@ -5,6 +5,11 @@ const DropdownLinks = [
         linkName: 'dropdown-link'
     },
     {
+        title: 'Add',
+        path: '/add',
+        linkName: 'dropdown-link'
+    },
+    {
         title: 'Lures',
         path: '/lures',
         linkName: 'dropdown-link'
