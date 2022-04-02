@@ -1,13 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CrankbaitIcon from "../../assets/icons/crankbait-dark.svg";
 import "./Crankbait.scss";
+import tools from "../../utils/tools";
+
+const loading = [{
+  "title":"og tiny",
+  "depth":"4'",
+  "target":"bass"
+}]
 
 function Crankbait() {
+  const [inv, setInv] = useState(loading);
+
+  useEffect(() => {
+    tools
+      .getInv()
+      .then((res) => {
+        setInv(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(function () {});
+  }, []);
+
   return (
     <section className="crankbait">
       <div className="crankbait__top">
         <h1 className="crankbait__title">Crankbait</h1>
-        <img className="crankbait__icon" src={CrankbaitIcon} alt="crankbait icon" />
+        <img
+          className="crankbait__icon"
+          src={CrankbaitIcon}
+          alt="crankbait icon"
+        />
       </div>
       <p>
         Crankbait is a fishing lure often made from hard ABS plastic, some have
@@ -23,9 +48,15 @@ function Crankbait() {
           <h4>Target</h4>
         </div>
         <ul className="crankbait__list">
-          <li>Shad Rap</li>
-          <li>4' - 7'</li>
-          <li>Bass</li>
+          {inv.map((item, index) => {
+            return (
+              <div className="crankbait__info">
+                <li className="crankbait__data" key={index}>{item.title}</li>
+                <li className="crankbait__data">{item.depth}</li>
+                <li className="crankbait__data">{item.target}</li>
+              </div>
+            );
+          })}
         </ul>
       </div>
     </section>

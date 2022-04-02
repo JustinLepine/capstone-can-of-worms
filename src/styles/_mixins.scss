@@ -22,7 +22,7 @@
     transition: 0.4s;
     
     @include tablet{
-        padding: 1rem 3rem;
+        padding: 1rem 3.5rem;
     }
 
     @include tablet {
@@ -67,12 +67,26 @@
 
     &__list {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
         list-style: none;
         padding: 0;
         border-top: 1px solid $dark-shades;
         padding-top: 1rem;
         margin-top: 0;
+        flex-direction: column;
+    }
+    
+    &__info {
+        display: flex;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        justify-content: space-between; 
+        border-bottom: dotted 1px $dark-shades;
+        text-decoration: none;
+    }
+
+    &__data:nth-child(2) {
+        margin-left: -1.8rem;
     }
 }
 
