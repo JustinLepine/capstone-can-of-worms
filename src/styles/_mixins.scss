@@ -14,29 +14,46 @@
 };
 
 @mixin details-styles {
+    background-color: $light-shades;
     color: $dark-shades;
+    padding: 1rem;
     margin: 2rem 5rem;
+    border-radius: 5px;
+    transition: 0.4s;
+    
+    @include tablet{
+        padding: 1rem 3rem;
+    }
 
     @include tablet {
         margin: 2rem 10rem;
     }
 
     @include desktop {
-        margin: 2rem 20rem;
+        margin: 2rem 15rem;
     }
 
     &__top {
         display: flex;
-        justify-content: space-around;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__icon {
-        height: 5rem;
+        height: 3rem;
+        margin-right: 5%;
+        
+        @include tablet {
+            height: 5rem;
+        }
     }
 
     &__title {
-        font-size: 3rem;
+        font-size: 2rem;
+
+        @include tablet {
+            font-size: 3rem;
+        }
     }
     
     &__inv {

@@ -1,5 +1,5 @@
 import React from "react";
-import CrankbaitIcon from "../../assets/icons/crankbait.svg";
+import CrankbaitIcon from "../../assets/icons/crankbait-dark.svg";
 import "./Crankbait.scss";
 
 function Crankbait() {
