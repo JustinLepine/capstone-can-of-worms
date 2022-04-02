@@ -1,0 +1,36 @@
+@use "../../styles/colors" as *;
+
+.add {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem;
+    color: $graphite;
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__form {
+        margin-bottom: 2rem;
+    }
+
+    &__subtitle {
+        font-size: 1rem;
+    }
+
+    &__input {
+        resize: none;
+        border-radius: 5px;
+        padding: 0.8rem;
+        padding-bottom: 0;
+    }
+
+    &__button {
+        padding: 0.8rem 2rem;
+        background-color: $aqua;
+        margin-top: 1rem;
+        border: none;
+        border-radius: 30px;
+        display: flex;
+    }
+}
