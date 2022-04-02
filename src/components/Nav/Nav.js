@@ -9,18 +9,18 @@ function Nav() {
   const [showDrop, setShowDrop] = useState(false);
 
   const onClick = () => {
-    setShowDrop(!showDrop)
-  }
+    setShowDrop(!showDrop);
+  };
 
   return (
     <nav className="nav">
       <Link to="/">
         <img className="nav__logo" src={Logo} alt="logo" />
       </Link>
-      <div
-        className="nav__drop-icon"
-        onClick={onClick}
-      >
+      <Link to="/">
+        <h2 className="nav__title">Can of Worms.</h2>
+      </Link>
+      <div className="nav__drop-icon" onClick={onClick}>
         <img className="nav__drop" src={Drop} alt="drop"></img>
         {showDrop && <Dropdown />}
       </div>

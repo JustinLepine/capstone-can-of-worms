@@ -1,4 +1,9 @@
 @use "../../styles/colors" as *;
+@use "../../styles/typography" as *;
+
+a {
+    text-decoration: none;
+}
 
 .nav {
     margin: 0;
@@ -9,15 +14,23 @@
     justify-content: space-between;
     border-radius: 0 0 0.5rem 0.5rem;
     box-shadow: 0px 5px 15px $card-shadow;
+    font-family: $font-lora;
 
     &__logo {
         height: 3.4rem;
         margin: 0.2rem;
-
     }
     
     &__logo:hover {
         background-color: $selected-main;
+    }
+
+    &__title {
+        letter-spacing: 0.2rem;
+        color: $light-shades;
+        margin: 0;
+        margin-top: 0.9rem;
+        font-size: 1.8rem;
     }
 
     &__drop-icon {
