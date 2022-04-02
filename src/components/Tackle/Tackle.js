@@ -12,26 +12,26 @@ function Tackle() {
       <Link className="lures__link" to="/">
         <div className="tackle__button">
           <img className="tackle__icon" src={Hook} alt="crankbait-icon" />
-          <p className="tackle__subtitles">Hooks</p>
         </div>
+          <p className="tackle__subtitles">Hooks</p>
       </Link>
       <Link className="lures__link" to="/">
         <div className="tackle__button">
           <img className="tackle__icon" src={Spoon} alt="crankbait-icon" />
-          <p className="tackle__subtitles">Spoons</p>
         </div>
+          <p className="tackle__subtitles">Spoons</p>
       </Link>
       <Link className="lures__link" to="/">
         <div className="tackle__button">
           <img className="tackle__icon" src={Jig} alt="crankbait-icon" />
-          <p className="tackle__subtitles">Jigs</p>
         </div>
+          <p className="tackle__subtitles">Jigs</p>
       </Link>
       <Link className="lures__link" to="/">
         <div className="tackle__button">
           <img className="tackle__icon" src={Weight} alt="crankbait-icon" />
-          <p className="tackle__subtitles">Weights</p>
         </div>
+          <p className="tackle__subtitles">Weights</p>
       </Link>
     </section>
   );

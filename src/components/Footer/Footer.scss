@@ -2,7 +2,7 @@
 
 .footer {
     margin-top: 1rem;
-    background-color: $sage;
+    background-color: $main;
     width: 100%;
     height: 5rem;
     display: flex;
@@ -10,6 +10,6 @@
     border-radius: 1rem 1rem 0 0;
 
     &__about {
-        color: $graphite;
+        color: $light-shades;
     }
 }

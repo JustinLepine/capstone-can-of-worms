@@ -10,26 +10,26 @@ function Rods() {
       <Link className="lures__link" to="/">
         <div className="rods__button">
           <img className="rods__icon" src={Rod} alt="rod-icon" />
-          <p className="rods__subtitles">Spinning Rods</p>
         </div>
+          <p className="rods__subtitles">Spinning Rods</p>
       </Link>
       <Link className="lures__link" to="/">
         <div className="rods__button">
           <img className="rods__icon" src={Reel} alt="crankbait-icon" />
-          <p className="rods__subtitles">Spinning Reel</p>
         </div>
+          <p className="rods__subtitles">Spinning Reel</p>
       </Link>
       <Link className="lures__link" to="/">
         <div className="rods__button">
           <img className="rods__icon" src={Rod} alt="crankbait-icon" />
-          <p className="rods__subtitles">Fly Rods</p>
         </div>
+          <p className="rods__subtitles">Fly Rods</p>
       </Link>
       <Link className="lures__link" to="/">
         <div className="rods__button">
           <img className="rods__icon" src={Reel} alt="crankbait-icon" />
-          <p className="rods__subtitles">Fly Reel</p>
         </div>
+          <p className="rods__subtitles">Fly Reel</p>
       </Link>
     </section>
   );

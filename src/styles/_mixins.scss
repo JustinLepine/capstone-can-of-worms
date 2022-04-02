@@ -14,7 +14,7 @@
 };
 
 @mixin details-styles {
-    color: $graphite;
+    color: $dark-shades;
     margin: 2rem 5rem;
 
     @include tablet {
@@ -53,7 +53,7 @@
         justify-content: space-between;
         list-style: none;
         padding: 0;
-        border-top: 1px solid $graphite;
+        border-top: 1px solid $dark-shades;
         padding-top: 1rem;
         margin-top: 0;
     }
@@ -67,8 +67,8 @@
     justify-content: center;
 
     @include tablet {
-        margin-left: 14.5%;
-        margin-right: 14.5%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     @include desktop {
@@ -77,22 +77,27 @@
     }
 
     &__button {
-        background-color: $sage;
-        box-shadow: 8px 8px 10px $graphite;
+        background-color: $main;
+        box-shadow: 0px 5px 15px $card-shadow;
         display: flex;
         flex-direction: column;
-        width: 10rem;
-        border-radius: 25px;
-        justify-content: flex-end;
+        margin-top: -2rem;
+        width: 9rem;
+        border-radius: 5px;
+        justify-content: center;
         padding: 1.5rem;
-        height: 14rem;
+        height: 12rem;
     }
     
-    &__link {        
+    &__link {
+        background-color: $light-shades;
+        padding: 1rem;
+        border-radius: 5px;
         margin: 2rem;
         text-decoration: none;
         display: flex;
         flex-direction: column;
+        box-shadow: 0px 5px 15px $card-shadow;
     }
 
     &__icon {
@@ -100,7 +105,7 @@
     }
 
     &__subtitles {
-        color: $graphite;
+        color: $dark-shades;
         font-size: 1.5rem;
         text-align: center;
         margin: 1rem 0 0;

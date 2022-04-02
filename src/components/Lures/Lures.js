@@ -12,26 +12,26 @@ function Lures() {
       <Link className="lures__link" to="/crankbait">
         <div className="lures__button">
           <img className="lures__icon" src={Crankbait} alt="crankbait-icon" />
-          <p className="lures__subtitles">Lures</p>
         </div>
+          <p className="lures__subtitles">Lures</p>
       </Link>
       <Link className="lures__link" to="/softbait">
       <div className="lures__button">
         <img className="lures__icon" src={Gummy} alt="crankbait-icon" />
-        <p className="lures__subtitles">Gummies</p>
       </div>
+        <p className="lures__subtitles">Gummies</p>
       </Link>
       <Link className="lures__link" to="/">
       <div className="lures__button">
         <img className="lures__icon" src={Popper} alt="crankbait-icon" />
-        <p className="lures__subtitles">Top Water</p>
       </div>
+        <p className="lures__subtitles">Top Water</p>
       </Link>
       <Link className="lures__link" to="/">
       <div className="lures__button">
         <img className="lures__icon" src={Frog} alt="crankbait-icon" />
-        <p className="lures__subtitles">Frogs</p>
       </div>
+        <p className="lures__subtitles">Frogs</p>
       </Link>
     </section>
   );
