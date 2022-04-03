@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./typography" as *;
 @use "./colors" as *;
 
 @mixin tablet {
@@ -16,21 +17,28 @@
 @mixin details-styles {
     background-color: $light-shades;
     color: $dark-shades;
-    padding: 1rem;
-    margin: 2rem 5rem;
+    padding: 1.2rem;
+    margin: 3rem 5rem;
     border-radius: 5px;
     transition: 0.4s;
+    min-height: 30rem;
     
     @include tablet{
         padding: 1rem 3.5rem;
-    }
-
-    @include tablet {
         margin: 2rem 10rem;
     }
 
     @include desktop {
         margin: 2rem 15rem;
+    }
+
+    p {
+        font-family: $font-karla;
+        font-size: 1rem;
+        
+        @include tablet{
+            font-size: 1.2rem;
+        }
     }
 
     &__top {
@@ -50,6 +58,7 @@
 
     &__title {
         font-size: 2rem;
+        font-family: $font-lora;
 
         @include tablet {
             font-size: 3rem;
@@ -96,6 +105,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: $font-karla;
 
     @include tablet {
         margin-left: 10%;

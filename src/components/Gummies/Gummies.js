@@ -1,5 +1,5 @@
 import React from 'react'
-import Gummy from "../../assets/icons/gummy_icon.svg";
+import Gummy from "../../assets/icons/gummy_icon-dark.svg";
 import './Gummies.scss'
 
 function Gummies() {

@@ -1,5 +1,6 @@
 @use "../../styles/colors" as *;
 @use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
 
 .add {
     display: flex;
@@ -11,6 +12,8 @@
     &__title {
         color: $light-shades;
         font-size: 2rem;
+        letter-spacing: 0.1rem;
+        font-family: $font-lora;
     }
 
     &__form {
@@ -23,6 +26,7 @@
         min-width: 15rem;
         margin-bottom: 2rem;
         transition-duration: 0.4s;
+        font-family: $font-karla;
 
         @include tablet {
             min-width: 25rem;
@@ -30,7 +34,7 @@
     }
 
     &__subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     &__input {

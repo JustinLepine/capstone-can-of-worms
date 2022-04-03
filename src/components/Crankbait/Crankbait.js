@@ -37,7 +37,7 @@ function Crankbait() {
       <p>
         Crankbait is a fishing lure often made from hard ABS plastic, some have
         metal bearings inside to create noise and attract predator fish. The
-        bait usually takes shape of a small fish, and or an injured fish. Most
+        bait usually takes shape of a small and or injured fish. Most
         crankbaits include a diving bill to dive the bait lower into the water,
         longer the bill deeper they dive when reeling in.
       </p>
@@ -50,8 +50,8 @@ function Crankbait() {
         <ul className="crankbait__list">
           {inv.map((item, index) => {
             return (
-              <div className="crankbait__info">
-                <li className="crankbait__data" key={index}>{item.title}</li>
+              <div  key={index} className="crankbait__info">
+                <li className="crankbait__data">{item.title}</li>
                 <li className="crankbait__data">{item.depth}</li>
                 <li className="crankbait__data">{item.target}</li>
               </div>

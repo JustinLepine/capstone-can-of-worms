@@ -20,6 +20,15 @@ a {
     &__logo {
         height: 3.4rem;
         margin: 0.2rem;
+        transition: 0.4s;
+
+        @include tablet {
+            margin-left: 2rem;
+        }
+
+        @include desktop {
+            margin-left: 3rem;
+        }
     }
     
     &__logo:hover {
@@ -43,6 +52,15 @@ a {
         margin-top: 0.2rem;
         height: 2rem;
         list-style: none;
+        transition: 0.4s;
+
+        @include tablet {
+            margin-right: 2rem;
+        }
+
+        @include desktop {
+            margin-right: 3rem;
+        }
     }
 
     &__drop {
