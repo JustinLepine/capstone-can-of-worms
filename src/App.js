@@ -4,6 +4,7 @@ import Tackle from './components/Tackle/Tackle';
 import Rods from './components/Rods/Rods';
 import Crankbait from './components/Crankbait/Crankbait';
 import Gummies from './components/Gummies/Gummies';
+import Frog from './components/Frog/Frog';
 import Add from './components/Add/Add';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
@@ -20,9 +21,10 @@ function App() {
         <Route path='/lures' component={Lures}/>
         <Route path='/tackle' component={Tackle}/>
         <Route path='/rods' component={Rods}/>
-        <Route path='/crankbait' component={Crankbait}/>        
+        <Route path='/crankbait' component={Crankbait}/>
         <Route path='/softbait' component={Gummies}/>
         <Route path='/topwater' component={Topwater}/>
+        <Route path='/frog' component={Frog}/>
         <Route path='/add' component={Add}/>
       </Switch>
       <Footer />

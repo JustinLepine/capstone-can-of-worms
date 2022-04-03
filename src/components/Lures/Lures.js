@@ -27,7 +27,7 @@ function Lures() {
       </div>
         <p className="lures__subtitles">Top Water</p>
       </Link>
-      <Link className="lures__link" to="/">
+      <Link className="lures__link" to="/frog">
       <div className="lures__button">
         <img className="lures__icon" src={Frog} alt="crankbait-icon" />
       </div>
