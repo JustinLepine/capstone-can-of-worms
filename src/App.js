@@ -4,11 +4,12 @@ import Tackle from './components/Tackle/Tackle';
 import Rods from './components/Rods/Rods';
 import Crankbait from './components/Crankbait/Crankbait';
 import Gummies from './components/Gummies/Gummies';
-import Nav from './components/Nav/Nav';
 import Add from './components/Add/Add';
+import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
+import Topwater from './components/Topwater/Topwater';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/rods' component={Rods}/>
         <Route path='/crankbait' component={Crankbait}/>        
         <Route path='/softbait' component={Gummies}/>
+        <Route path='/topwater' component={Topwater}/>
         <Route path='/add' component={Add}/>
       </Switch>
       <Footer />
