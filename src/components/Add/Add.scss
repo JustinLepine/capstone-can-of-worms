@@ -61,6 +61,11 @@
     }
 
     &__button:hover {
-        background-color: $light-accent;
+        background-color: $dark-accent;
+    }
+
+    &__radio {
+        display: flex;
+        justify-content: space-between;
     }
 }

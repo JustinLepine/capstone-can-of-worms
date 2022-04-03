@@ -13,13 +13,13 @@ function Lures() {
         <div className="lures__button">
           <img className="lures__icon" src={Crankbait} alt="crankbait-icon" />
         </div>
-          <p className="lures__subtitles">Lures</p>
+          <p className="lures__subtitles">Crankbait</p>
       </Link>
       <Link className="lures__link" to="/softbait">
       <div className="lures__button">
         <img className="lures__icon" src={Gummy} alt="crankbait-icon" />
       </div>
-        <p className="lures__subtitles">Gummies</p>
+        <p className="lures__subtitles">Soft Bait</p>
       </Link>
       <Link className="lures__link" to="/topwater">
       <div className="lures__button">

@@ -1,31 +1,67 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import Gummy from "../../assets/icons/gummy_icon-dark.svg";
-import './Gummies.scss'
+import tools from "../../utils/tools";
+import "./Gummies.scss";
+
+const loading = [
+  {
+    title: "og tiny",
+    depth: "4'",
+    target: "bass",
+  },
+];
 
 function Gummies() {
+  const [inv, setInv] = useState(loading);
+
+  useEffect(() => {
+    tools
+      .getInv()
+      .then((res) => {
+        console.log(res.data[0].category);
+        setInv(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(function () {});
+  }, []);
+
   return (
     <section className="gummies">
-    <div className="gummies__top">
-      <h1 className="gummies__title">Soft Baits</h1>
-      <img className="gummies__icon" src={Gummy} alt="gummies icon" />
-    </div>
-    <p>
-      Soft bait are hybrid plastic lures made to look like worms and other small creatures. They are very effective in areas with a lot of weeds and obstacles. You are able to hide the hook inside the soft bait to avoided getting snagged on objects. The down side to soft baits is that they are not reusable in most cases.
-    </p>
-    <div className="gummies__inv">
-      <div className="gummies__subtitles">
-        <h4>Name</h4>
-        <h4>Depth</h4>
-        <h4>Target</h4>
+      <div className="gummies__top">
+        <h1 className="gummies__title">Soft Baits</h1>
+        <img className="gummies__icon" src={Gummy} alt="gummies icon" />
       </div>
-      <ul className="gummies__list">
-        <li>Bandito Bug</li>
-        <li>4' - 7'</li>
-        <li>Bass</li>
-      </ul>
-    </div>
-  </section>
-  )
+      <p>
+        Soft bait are hybrid plastic lures made to look like worms and other
+        small creatures. They are very effective in areas with a lot of weeds
+        and obstacles. You are able to hide the hook inside the soft bait to
+        avoided getting snagged on objects. The down side to soft baits is that
+        they are not reusable in most cases.
+      </p>
+      <div className="gummies__inv">
+        <div className="gummies__subtitles">
+          <h4>Name</h4>
+          <h4>Depth</h4>
+          <h4>Target</h4>
+        </div>
+        <ul className="gummies__list">
+          {inv
+            .filter((selected) => selected.category === "softbait")
+            .map((item, index) => {
+              return (
+                <div key={index} className="crankbait__info">
+                  <li className="crankbait__data">{item.title}</li>
+                  <li className="crankbait__data">{item.depth}</li>
+                  <li className="crankbait__data">{item.target}</li>
+                </div>
+              );
+            })}
+        </ul>
+      </div>
+    </section>
+  );
 }
 
-export default Gummies
+export default Gummies;
