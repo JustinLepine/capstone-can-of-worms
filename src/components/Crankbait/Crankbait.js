@@ -3,16 +3,8 @@ import CrankbaitIcon from "../../assets/icons/crankbait-dark.svg";
 import "./Crankbait.scss";
 import tools from "../../utils/tools";
 
-const loading = [
-  {
-    title: "og tiny",
-    depth: "4'",
-    target: "bass",
-  },
-];
-
 function Crankbait() {
-  const [inv, setInv] = useState(loading);
+  const [inv, setInv] = useState([]);
 
   useEffect(() => {
     tools

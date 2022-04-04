@@ -3,16 +3,8 @@ import FrogIcon from "../../assets/icons/frog-dark.svg";
 import "./Frog.scss";
 import tools from "../../utils/tools";
 
-const loading = [
-  {
-    title: "og tiny",
-    depth: "4'",
-    target: "bass",
-  },
-];
-
 function Frog() {
-  const [inv, setInv] = useState(loading);
+  const [inv, setInv] = useState([]);
 
   useEffect(() => {
     tools

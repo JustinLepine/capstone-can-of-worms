@@ -8,6 +8,12 @@
     }
 };
 
+@mixin large-tablet {
+    @media (min-width: $large-tablet-breakpoint) {
+        @content;
+    }
+};
+
 @mixin desktop {
     @media (min-width: $desktop-breakpoint) {
         @content;
@@ -21,7 +27,7 @@
     margin: 3rem 5rem;
     border-radius: 5px;
     transition: 0.4s;
-    min-height: 70.3vh;
+    min-height: calc(100vh - 17.2rem);
     
     @include tablet{
         padding: 1rem 3.5rem;
@@ -82,11 +88,11 @@
         border-top: 1px solid $dark-shades;
         padding-top: 1rem;
         margin-top: 0;
-        flex-direction: column;
     }
     
     &__info {
         display: flex;
+        width: 100%;
         padding-bottom: 1rem;
         margin-bottom: 1rem;
         justify-content: space-between; 
@@ -94,8 +100,15 @@
         text-decoration: none;
     }
 
-    &__data:nth-child(2) {
-        margin-left: -1.8rem;
+    &__data {
+        width: 18%;
+    }
+
+    &__delete {
+        width: 25px;
+        background-color: $light-shades;
+        border: none;
+        margin-right: 0.8rem;
     }
 }
 
@@ -104,18 +117,23 @@
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
-    min-height: 77.2vh;
+    min-height: calc(100vh - 17.2rem);
     justify-content: center;
     font-family: $font-karla;
 
     @include tablet {
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+
+    @include large-tablet {
+        margin-left: 20%;
+        margin-right: 20%;
     }
 
     @include desktop {
-        margin-left: 25%;
-        margin-right: 25%;
+        margin-left: 27%;
+        margin-right: 27%;
     }
 
     &__button {

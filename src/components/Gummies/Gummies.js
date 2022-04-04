@@ -3,16 +3,8 @@ import Gummy from "../../assets/icons/gummy_icon-dark.svg";
 import tools from "../../utils/tools";
 import "./Gummies.scss";
 
-const loading = [
-  {
-    title: "og tiny",
-    depth: "4'",
-    target: "bass",
-  },
-];
-
 function Gummies() {
-  const [inv, setInv] = useState(loading);
+  const [inv, setInv] = useState([]);
 
   useEffect(() => {
     tools
@@ -51,10 +43,10 @@ function Gummies() {
             .filter((selected) => selected.category === "softbait")
             .map((item, index) => {
               return (
-                <div key={index} className="crankbait__info">
-                  <li className="crankbait__data">{item.title}</li>
-                  <li className="crankbait__data">{item.depth}</li>
-                  <li className="crankbait__data">{item.target}</li>
+                <div key={index} className="gummies__info">
+                  <li className="gummies__data">{item.title}</li>
+                  <li className="gummies__data">{item.depth}</li>
+                  <li className="gummies__data">{item.target}</li>
                 </div>
               );
             })}
