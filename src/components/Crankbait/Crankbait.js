@@ -25,7 +25,7 @@ function Crankbait() {
         console.log(err);
       })
       .finally(function () {});
-  }, []);
+  }, [inv]);
 
   const deleteHandler = (id) => {
     console.log(id);
@@ -34,8 +34,6 @@ function Crankbait() {
         data: { id: id },
       })
       .then((res) => {
-        // setInv([inv])
-
         console.log(res);
       })
       .catch((err) => console.log(err));

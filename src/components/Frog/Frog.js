@@ -26,7 +26,7 @@ function Frog() {
         console.log(err);
       })
       .finally(function () {});
-  }, []);
+  }, [inv]);
 
   const deleteHandler = (id) => {
 

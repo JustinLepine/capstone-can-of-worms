@@ -26,7 +26,7 @@ function Topwater() {
         console.log(err);
       })
       .finally(function () {});
-  }, []);
+  }, [inv]);
   
   const deleteHandler = (id) => {
 
