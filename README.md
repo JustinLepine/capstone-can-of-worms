@@ -1,6 +1,6 @@
 # Can of Worms
 
-This is my react Capstone project for BrainStation a fishing guide to help new fishermen learn basic essitials to help fish efficiently. In this app users will be able to manage their fishing lures by type and keep track of which lures are in their tackle box. The Can of Worms app was created using React, React-Router, Sass and the Framer-Motion library. Phase one now complete here is a preview of what this app has to offer.
+This is my react Capstone project for BrainStation a fishing guide to help new fishermen learn basic essentials to help fish efficiently. In this app users will be able to manage their fishing lures by type and keep track of which lures are in their tackle box. The Can of Worms app was created using React, React-Router, Sass and the Framer-Motion library. Phase one now complete here is a preview of what this app has to offer.
 
 # Installation
 
