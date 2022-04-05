@@ -3,6 +3,7 @@ import Gummy from "../../assets/icons/gummy_icon-dark.svg";
 import Delete from "../../assets/icons/delete.svg";
 import Back from "../../assets/icons/back-icon.svg";
 import { useHistory } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./Gummies.scss";
 import tools from "../../utils/tools";
 import axios from "axios";
@@ -40,7 +41,11 @@ function Gummies() {
   };
 
   return (
-    <section className="gummies">
+    <motion.section className="gummies"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 0}}
+    >
       <div className="gummies__top">
         <h1 className="gummies__title">Soft Baits</h1>
         <img className="gummies__icon" src={Gummy} alt="gummies icon" />
@@ -85,7 +90,7 @@ function Gummies() {
         src={Back}
         alt="back"
       />
-    </section>
+    </motion.section>
   );
 }
 

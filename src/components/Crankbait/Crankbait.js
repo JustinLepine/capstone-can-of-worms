@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CrankbaitIcon from "../../assets/icons/crankbait-dark.svg";
+import { motion } from "framer-motion";
 import Delete from "../../assets/icons/delete.svg";
 import Back from "../../assets/icons/back-icon.svg";
 import { useHistory } from "react-router-dom";
@@ -39,7 +40,11 @@ function Crankbait() {
   };
 
   return (
-    <section className="crankbait">
+    <motion.section className="crankbait"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 0}}
+    >
       <div className="crankbait__top">
         <h1 className="crankbait__title">Crankbait</h1>
         <img
@@ -88,7 +93,7 @@ function Crankbait() {
         src={Back}
         alt="back"
       />
-    </section>
+    </motion.section>
   );
 }
 

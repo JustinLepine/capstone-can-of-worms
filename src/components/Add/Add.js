@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./Add.scss";
 import axios from "axios";
 
@@ -29,7 +30,11 @@ function Add() {
   };
 
   return (
-    <section className="add">
+    <motion.section className="add"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 0}}
+    >
       <h1 className="add__title">Add New Baits</h1>
       <form id="form" onSubmit={submitHandler} className="add__form">
         <h5 className="add__subtitle">TITLE</h5>
@@ -62,7 +67,7 @@ function Add() {
           <button type="button" onClick={resetInputField} className="add__button">RESET</button>
         </div>
       </form>
-    </section>
+    </motion.section>
   );
 }
 

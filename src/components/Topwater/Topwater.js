@@ -3,6 +3,7 @@ import Popper from "../../assets/icons/popper-dark.svg";
 import Delete from "../../assets/icons/delete.svg";
 import Back from "../../assets/icons/back-icon.svg";
 import { useHistory } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./Topwater.scss";
 import tools from "../../utils/tools";
 import axios from "axios";
@@ -40,7 +41,11 @@ function Topwater() {
   };
 
   return (
-    <section className="topwater">
+    <motion.section className="topwater"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 0}}
+    >
       <div className="topwater__top">
         <h1 className="topwater__title">Top Water</h1>
         <img className="topwater__icon" src={Popper} alt="topwater icon" />
@@ -79,7 +84,7 @@ function Topwater() {
         src={Back}
         alt="back"
       />
-    </section>
+    </motion.section>
   );
 }
 

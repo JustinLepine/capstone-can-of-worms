@@ -3,6 +3,7 @@ import FrogIcon from "../../assets/icons/frog-dark.svg";
 import Delete from "../../assets/icons/delete.svg";
 import Back from "../../assets/icons/back-icon.svg";
 import { useHistory } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./Frog.scss";
 import tools from "../../utils/tools";
 import axios from "axios";
@@ -40,7 +41,11 @@ function Frog() {
   };
 
   return (
-    <section className="frog">
+    <motion.section className="frog"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 0}}
+    >
       <div className="frog__top">
         <h1 className="frog__title">Frogs</h1>
         <img className="frog__icon" src={FrogIcon} alt="frog icon" />
@@ -79,7 +84,7 @@ function Frog() {
         src={Back}
         alt="back"
       />
-    </section>
+    </motion.section>
   );
 }
 
