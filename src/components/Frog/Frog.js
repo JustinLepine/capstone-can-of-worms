@@ -29,8 +29,6 @@ function Frog() {
   }, [inv]);
 
   const deleteHandler = (id) => {
-
-    console.log(id)
     axios
       .delete("http://localhost:8080/inventory", {
         data: {id: id}
@@ -39,7 +37,6 @@ function Frog() {
         console.log(res);
       })
       .catch((err) => console.log(err));
-
   };
 
   return (

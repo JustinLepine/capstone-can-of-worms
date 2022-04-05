@@ -5,9 +5,11 @@
 .add {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 0rem 2rem;
     color: $dark-shades;
+    min-height: calc(100vh - 12.2rem);
 
     &__title {
         color: $light-shades;
@@ -39,9 +41,14 @@
 
     &__input {
         resize: none;
+        border: 1px solid $dark-accent;
         border-radius: 5px;
         padding: 0.8rem;
-        padding-bottom: 0;
+    }
+
+    &__button-box {
+        display: flex;
+        justify-content: space-between;
     }
 
     &__button {
@@ -66,6 +73,10 @@
 
     &__radio {
         display: flex;
-        justify-content: space-between;
+    }
+
+    &__radio-label {
+        margin-top: 0.07rem;
+        font-size: 0.9rem;
     }
 }

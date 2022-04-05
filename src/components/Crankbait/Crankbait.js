@@ -28,7 +28,6 @@ function Crankbait() {
   }, [inv]);
 
   const deleteHandler = (id) => {
-    console.log(id);
     axios
       .delete("http://localhost:8080/inventory", {
         data: { id: id },
@@ -37,7 +36,6 @@ function Crankbait() {
         console.log(res);
       })
       .catch((err) => console.log(err));
-    setInv(inv);
   };
 
   return (

@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Add.scss";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 
 function Add() {
-  const history = useHistory();
+  const [inputValue, setInputValue] = useState();
+
+  const handleUserInput = (e) => {
+    console.log(inputValue)
+    setInputValue(e.target.value);
+  };
+
+  const resetInputField = () => {
+    document.getElementById('form').reset()
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -16,42 +24,43 @@ function Add() {
         target: e.target.inputTarget.value,
         category: e.target.inputCategory.value,
       })
-      .then((_res) => {
-        history.push(`/`);
-      })
+      .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
 
   return (
     <section className="add">
       <h1 className="add__title">Add New Baits</h1>
-      <form onSubmit={submitHandler} className="add__form">
+      <form id="form" onSubmit={submitHandler} className="add__form">
         <h5 className="add__subtitle">TITLE</h5>
-        <textarea className="add__input" name="inputTitle"></textarea>
+        <input onChange={handleUserInput} className="add__input" name="inputTitle"></input>
         <h5 className="add__subtitle">DEPTH</h5>
-        <textarea className="add__input" name="inputDepth"></textarea>
+        <input onChange={handleUserInput} className="add__input" name="inputDepth"></input>
         <h5 className="add__subtitle">TARGET FISH</h5>
-        <textarea className="add__input" name="inputTarget"></textarea>
+        <input onChange={handleUserInput} className="add__input" name="inputTarget"></input>
         <h5 className="add__subtitle">CATEGORY</h5>
         <div className="add__radio">
-          <div>
+          <div className="add__radio">
             <input type="radio" name="inputCategory" value="crankbait" />
-            <label>CRANKBAIT</label>
+            <label className="add__radio-label">CRANKBAIT</label>
           </div>
-          <div>
+          <div className="add__radio">
             <input type="radio" name="inputCategory" value="softbait" />
-            <label>SOFTBAIT</label>
+            <label className="add__radio-label">SOFTBAIT</label>
           </div>
-          <div>
+          <div className="add__radio">
             <input type="radio" name="inputCategory" value="topwater" />
-            <label>TOPWATER</label>
+            <label className="add__radio-label">TOPWATER</label>
           </div>
-          <div>
+          <div className="add__radio">
             <input type="radio" name="inputCategory" value="frogs" />
-            <label>FROGS</label>
+            <label className="add__radio-label">FROGS</label>
           </div>
         </div>
-        <button className="add__button">ADD</button>
+        <div className="add__button-box">
+          <button type="submit" className="add__button">ADD</button>
+          <button type="button" onClick={resetInputField} className="add__button">RESET</button>
+        </div>
       </form>
     </section>
   );
