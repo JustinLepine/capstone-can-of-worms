@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import CrankbaitIcon from "../../assets/icons/crankbait-dark.svg";
+import Delete from "../../assets/icons/delete.svg";
 import "./Crankbait.scss";
 import tools from "../../utils/tools";
+import axios from "axios";
 
 function Crankbait() {
   const [inv, setInv] = useState([]);
@@ -17,6 +19,20 @@ function Crankbait() {
       })
       .finally(function () {});
   }, []);
+
+  const deleteHandler = (id) => {
+
+    console.log(id)
+    axios
+      .delete("http://localhost:8080/inventory", {
+        data: {id: id}
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+
+  };
 
   return (
     <section className="crankbait">
@@ -50,6 +66,12 @@ function Crankbait() {
                   <li className="crankbait__data">{item.title}</li>
                   <li className="crankbait__data">{item.depth}</li>
                   <li className="crankbait__data">{item.target}</li>
+                  <button className="crankbait__delete" onClick={ () => deleteHandler(item.id)}>
+                      <img
+                        src={Delete}
+                        alt="delete"
+                      />
+                    </button>
                 </div>
               );
             })}

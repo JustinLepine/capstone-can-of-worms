@@ -7,17 +7,7 @@ import axios from "axios";
 
 function Topwater() {
   const [inv, setInv] = useState([]);
-  // const [delInv, setDelInv] = useState({
-  //   title: "",
-  //   depth: "",
-  //   target: "",
-  // })
 
-  // const handleChange = (event) => {
-  //   event.preventDefault();
-
-  // }
-  
   useEffect(() => {
     tools
       .getInv()
@@ -32,9 +22,10 @@ function Topwater() {
   
   const deleteHandler = (id) => {
 
+    console.log(id)
     axios
       .delete("http://localhost:8080/inventory", {
-        id: id
+        data: {id: id}
       })
       .then((res) => {
         console.log(res);

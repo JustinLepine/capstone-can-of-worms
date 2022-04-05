@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Gummy from "../../assets/icons/gummy_icon-dark.svg";
+import Delete from "../../assets/icons/delete.svg";
 import tools from "../../utils/tools";
 import "./Gummies.scss";
+import axios from "axios";
 
 function Gummies() {
   const [inv, setInv] = useState([]);
@@ -18,6 +20,20 @@ function Gummies() {
       })
       .finally(function () {});
   }, []);
+
+  const deleteHandler = (id) => {
+
+    console.log(id)
+    axios
+      .delete("http://localhost:8080/inventory", {
+        data: {id: id}
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+
+  };
 
   return (
     <section className="gummies">
@@ -47,6 +63,12 @@ function Gummies() {
                   <li className="gummies__data">{item.title}</li>
                   <li className="gummies__data">{item.depth}</li>
                   <li className="gummies__data">{item.target}</li>
+                  <button className="gummies__delete" onClick={ () => deleteHandler(item.id)}>
+                      <img
+                        src={Delete}
+                        alt="delete"
+                      />
+                    </button>
                 </div>
               );
             })}

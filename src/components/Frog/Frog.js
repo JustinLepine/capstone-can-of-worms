@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import FrogIcon from "../../assets/icons/frog-dark.svg";
+import Delete from "../../assets/icons/delete.svg";
 import "./Frog.scss";
 import tools from "../../utils/tools";
+import axios from "axios";
 
 function Frog() {
   const [inv, setInv] = useState([]);
@@ -17,6 +19,20 @@ function Frog() {
       })
       .finally(function () {});
   }, []);
+
+  const deleteHandler = (id) => {
+
+    console.log(id)
+    axios
+      .delete("http://localhost:8080/inventory", {
+        data: {id: id}
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+
+  };
 
   return (
     <section className="frog">
@@ -40,6 +56,12 @@ function Frog() {
                   <li className="frog__data">{item.title}</li>
                   <li className="frog__data">{item.depth}</li>
                   <li className="frog__data">{item.target}</li>
+                  <button className="frog__delete" onClick={ () => deleteHandler(item.id)}>
+                      <img
+                        src={Delete}
+                        alt="delete"
+                      />
+                    </button>
                 </div>
               );
             })}
