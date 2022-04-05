@@ -43,8 +43,4 @@ Complete the following steps to get the app running on your local computer.
 
 ## Start the App
 
-Run `npm start` on the server first then the same command on the client side
-
-    ```bash
-    $ npm start
-    ```
+Run `npm start` on the server first then the same command on the client side.
