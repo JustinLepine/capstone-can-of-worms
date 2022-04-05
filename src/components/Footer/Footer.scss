@@ -18,4 +18,15 @@
         margin: 0;
         font-size: 1.8rem;
     }
+
+    &__git-icon {
+        height: 35px;
+        margin: 1rem;
+    }
+    
+    &__link-icon {
+        height: 50px;
+        margin: 1rem;
+        margin-top: 1.2rem;
+    }
 }
