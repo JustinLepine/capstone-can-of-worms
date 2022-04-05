@@ -1,9 +1,10 @@
 import axios from 'axios';
+import { API_URL } from '../config/index.js'
 
 const tools = {
 
-    getInv: () => axios.get('http://localhost:8080/inventory'),
-    delInv: () => axios.delete('http://localhost:8080/inventory'),
+    getInv: () => axios.get(`${API_URL}/inventory`),
+    delInv: () => axios.delete(`${API_URL}/inventory`),
 
 }
 

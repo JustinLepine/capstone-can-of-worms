@@ -3,6 +3,7 @@ import Gummy from "../../assets/icons/gummy_icon-dark.svg";
 import Delete from "../../assets/icons/delete.svg";
 import Back from "../../assets/icons/back-icon.svg";
 import { useHistory } from "react-router-dom";
+import { API_URL } from '../../config/index.js'
 import { motion } from "framer-motion";
 import "./Gummies.scss";
 import tools from "../../utils/tools";
@@ -31,7 +32,7 @@ function Gummies() {
 
   const deleteHandler = (id) => {
     axios
-      .delete("http://localhost:8080/inventory", {
+      .delete(`${API_URL}/inventory`, {
         data: {id: id}
       })
       .then((res) => {

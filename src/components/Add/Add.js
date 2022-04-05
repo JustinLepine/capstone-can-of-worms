@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Add.scss";
+import { API_URL } from '../../config/index.js'
 import axios from "axios";
 
 function Add() {
@@ -19,7 +20,7 @@ function Add() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8080/inventory", {
+      .post(`${API_URL}/inventory`, {
         title: e.target.inputTitle.value,
         depth: e.target.inputDepth.value,
         target: e.target.inputTarget.value,
