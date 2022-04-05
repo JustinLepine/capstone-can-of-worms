@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import CrankbaitIcon from "../../assets/icons/crankbait-dark.svg";
 import Delete from "../../assets/icons/delete.svg";
+import Back from "../../assets/icons/back-icon.svg";
+import { useHistory } from "react-router-dom";
 import "./Crankbait.scss";
 import tools from "../../utils/tools";
 import axios from "axios";
 
 function Crankbait() {
   const [inv, setInv] = useState([]);
+  const history = useHistory();
+
+  const backClick = () => {history.goBack()}
 
   useEffect(() => {
     tools
@@ -28,10 +33,15 @@ function Crankbait() {
         data: {id: id}
       })
       .then((res) => {
+
+
+        // setInv([inv])
+
+
         console.log(res);
       })
       .catch((err) => console.log(err));
-
+      setInv(inv)
   };
 
   return (
@@ -56,6 +66,7 @@ function Crankbait() {
           <h4>Name</h4>
           <h4>Depth</h4>
           <h4>Target</h4>
+          <h4>Delete</h4>
         </div>
         <ul className="crankbait__list">
           {inv
@@ -77,6 +88,9 @@ function Crankbait() {
             })}
         </ul>
       </div>
+
+      <img onClick={backClick} className="crankbait__back" src={Back} alt='back' />
+
     </section>
   );
 }

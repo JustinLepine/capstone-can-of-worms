@@ -15,8 +15,23 @@ const DropdownLinks = [
         linkName: 'dropdown-link'
     },
     {
+        title: 'Crankbait',
+        path: '/crankbait',
+        linkName: 'dropdown-link'
+    },
+    {
         title: 'Soft Baits',
         path: '/softbait',
+        linkName: 'dropdown-link'
+    },
+    {
+        title: 'Topwater',
+        path: '/topwater',
+        linkName: 'dropdown-link'
+    },
+    {
+        title: 'Frogs',
+        path: '/frog',
         linkName: 'dropdown-link'
     }
 ]

@@ -110,6 +110,10 @@
         border: none;
         margin-right: 0.8rem;
     }
+
+    &__back {
+        height: 25px;
+    }
 }
 
 @mixin dash-styles {

@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Popper from "../../assets/icons/popper-dark.svg";
 import Delete from "../../assets/icons/delete.svg";
+import Back from "../../assets/icons/back-icon.svg";
+import { useHistory } from "react-router-dom";
 import "./Topwater.scss";
 import tools from "../../utils/tools";
 import axios from "axios";
 
 function Topwater() {
   const [inv, setInv] = useState([]);
+
+  const history = useHistory();
+
+  const backClick = () => {
+    history.goBack();
+  };
 
   useEffect(() => {
     tools
@@ -68,6 +76,12 @@ function Topwater() {
             })}
         </ul>
       </div>
+      <img
+        onClick={backClick}
+        className="topwater__back"
+        src={Back}
+        alt="back"
+      />
     </section>
   );
 }

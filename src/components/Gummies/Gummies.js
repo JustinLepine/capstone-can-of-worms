@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Gummy from "../../assets/icons/gummy_icon-dark.svg";
 import Delete from "../../assets/icons/delete.svg";
+import Back from "../../assets/icons/back-icon.svg";
+import { useHistory } from "react-router-dom";
 import tools from "../../utils/tools";
 import "./Gummies.scss";
 import axios from "axios";
@@ -8,11 +10,16 @@ import axios from "axios";
 function Gummies() {
   const [inv, setInv] = useState([]);
 
+  const history = useHistory();
+
+  const backClick = () => {
+    history.goBack();
+  };
+
   useEffect(() => {
     tools
       .getInv()
       .then((res) => {
-        console.log(res.data[0].category);
         setInv(res.data);
       })
       .catch((err) => {
@@ -53,6 +60,7 @@ function Gummies() {
           <h4>Name</h4>
           <h4>Depth</h4>
           <h4>Target</h4>
+          <h4>Delete</h4>
         </div>
         <ul className="gummies__list">
           {inv
@@ -74,6 +82,12 @@ function Gummies() {
             })}
         </ul>
       </div>
+      <img
+        onClick={backClick}
+        className="gummies__back"
+        src={Back}
+        alt="back"
+      />
     </section>
   );
 }

@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from "react";
 import FrogIcon from "../../assets/icons/frog-dark.svg";
 import Delete from "../../assets/icons/delete.svg";
+import Back from "../../assets/icons/back-icon.svg";
+import { useHistory } from "react-router-dom";
 import "./Frog.scss";
 import tools from "../../utils/tools";
 import axios from "axios";
 
 function Frog() {
   const [inv, setInv] = useState([]);
+
+  const history = useHistory();
+
+  const backClick = () => {
+    history.goBack();
+  };
 
   useEffect(() => {
     tools
@@ -46,6 +54,7 @@ function Frog() {
           <h4>Name</h4>
           <h4>Depth</h4>
           <h4>Target</h4>
+          <h4>Delete</h4>
         </div>
         <ul className="frog__list">
           {inv
@@ -67,6 +76,12 @@ function Frog() {
             })}
         </ul>
       </div>
+      <img
+        onClick={backClick}
+        className="frog__back"
+        src={Back}
+        alt="back"
+      />
     </section>
   );
 }
