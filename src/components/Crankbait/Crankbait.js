@@ -11,7 +11,9 @@ function Crankbait() {
   const [inv, setInv] = useState([]);
   const history = useHistory();
 
-  const backClick = () => {history.goBack()}
+  const backClick = () => {
+    history.goBack();
+  };
 
   useEffect(() => {
     tools
@@ -26,22 +28,18 @@ function Crankbait() {
   }, []);
 
   const deleteHandler = (id) => {
-
-    console.log(id)
+    console.log(id);
     axios
       .delete("http://localhost:8080/inventory", {
-        data: {id: id}
+        data: { id: id },
       })
       .then((res) => {
-
-
         // setInv([inv])
-
 
         console.log(res);
       })
       .catch((err) => console.log(err));
-      setInv(inv)
+    setInv(inv);
   };
 
   return (
@@ -77,20 +75,23 @@ function Crankbait() {
                   <li className="crankbait__data">{item.title}</li>
                   <li className="crankbait__data">{item.depth}</li>
                   <li className="crankbait__data">{item.target}</li>
-                  <button className="crankbait__delete" onClick={ () => deleteHandler(item.id)}>
-                      <img
-                        src={Delete}
-                        alt="delete"
-                      />
-                    </button>
+                  <button
+                    className="crankbait__delete"
+                    onClick={() => deleteHandler(item.id)}
+                  >
+                    <img src={Delete} alt="delete" />
+                  </button>
                 </div>
               );
             })}
         </ul>
       </div>
-
-      <img onClick={backClick} className="crankbait__back" src={Back} alt='back' />
-
+      <img
+        onClick={backClick}
+        className="crankbait__back"
+        src={Back}
+        alt="back"
+      />
     </section>
   );
 }
