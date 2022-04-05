@@ -40,7 +40,7 @@ function Frog() {
         <h1 className="frog__title">Frogs</h1>
         <img className="frog__icon" src={FrogIcon} alt="frog icon" />
       </div>
-      <p>needs content and correct inv</p>
+      <p>Frog lures can be considered topwater lures but mimic the typical frog and its movements. They float on the top of the water and can be skipped across lily pads. With hooks hidden inside of the soft plastic body this lure is sure to catch larger fish looking for a snack.</p>
       <div className="frog__inv">
         <div className="frog__subtitles">
           <h4>Name</h4>

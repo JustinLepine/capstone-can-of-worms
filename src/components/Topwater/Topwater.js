@@ -40,7 +40,7 @@ function Topwater() {
         <h1 className="topwater__title">Top Water</h1>
         <img className="topwater__icon" src={Popper} alt="topwater icon" />
       </div>
-      <p>needs content and correct inv</p>
+      <p>Topwater bait are also known as surface lures. These lures are often made from wood or plastic and are designed to float. In this category there are 3 popuplar types (poppers, walkers, and wobblers). These lures are cast out and retrieved slowly, some splash around to attract predators.</p>
       <div className="topwater__inv">
         <div className="topwater__subtitles">
           <h4>Name</h4>
