@@ -36,10 +36,6 @@ Complete the following steps to get the app running on your local computer.
    ```bash
    $ npm run migrate
    ```
-5. Run seeds
-   ```bash
-   $ npm run seed
-   ```
 
 ## Start the App
 
