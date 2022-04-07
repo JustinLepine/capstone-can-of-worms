@@ -64,8 +64,8 @@ function Add() {
           </div>
         </div>
         <div className="add__button-box">
-          <button type="submit" className="add__button">ADD</button>
           <button type="button" onClick={resetInputField} className="add__button">RESET</button>
+          <button type="submit" className="add__button">ADD</button>
         </div>
       </form>
     </motion.section>
