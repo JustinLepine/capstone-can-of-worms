@@ -1,17 +1,7 @@
-import Dash from "./components/Dash/Dash";
-import Lures from "./components/Lures/Lures";
-import Tackle from "./components/Tackle/Tackle";
-import Rods from "./components/Rods/Rods";
-import Crankbait from "./components/Crankbait/Crankbait";
-import Gummies from "./components/Gummies/Gummies";
-import Frog from "./components/Frog/Frog";
-import Add from "./components/Add/Add";
-import Nav from "./components/Nav/Nav";
-import Footer from "./components/Footer/Footer";
+import { Nav, Dash, Lures, Tackle, Rods, Crankbait, Gummies, Frog, Add, Topwater, Footer } from "./components/index"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import "./App.scss";
-import Topwater from "./components/Topwater/Topwater";
 
 function App() {
   return (
