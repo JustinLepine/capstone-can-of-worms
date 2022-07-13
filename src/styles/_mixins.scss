@@ -119,25 +119,13 @@
 @mixin dash-styles {
     margin: 0rem;
     margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     min-height: calc(100vh - 13.2rem);
     justify-content: center;
     font-family: $font-karla;
 
     @include tablet {
-        margin-left: 12%;
-        margin-right: 12%;
-    }
-
-    @include large-tablet {
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-
-    @include desktop {
-        margin-left: 27%;
-        margin-right: 27%;
+        grid-template-columns: 18rem 18rem;
     }
 
     &__button {
