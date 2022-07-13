@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import CrankbaitIcon from "../../assets/icons/crankbait-dark.svg";
+import Images from "../../assets/icons/index";
 import { motion } from "framer-motion";
-import Delete from "../../assets/icons/delete.svg";
-import Back from "../../assets/icons/back-icon.svg";
 import { useHistory } from "react-router-dom";
 import { API_URL } from '../../config/index.js'
 import "./Crankbait.scss";
@@ -50,7 +48,7 @@ function Crankbait() {
         <h1 className="crankbait__title">Crankbait</h1>
         <img
           className="crankbait__icon"
-          src={CrankbaitIcon}
+          src={Images.CrankbaitDark}
           alt="crankbait icon"
         />
       </div>
@@ -81,7 +79,7 @@ function Crankbait() {
                     className="crankbait__delete"
                     onClick={() => deleteHandler(item.id)}
                   >
-                    <img src={Delete} alt="delete" />
+                    <img src={Images.Delete} alt="delete" />
                   </button>
                 </div>
               );
@@ -91,7 +89,7 @@ function Crankbait() {
       <img
         onClick={backClick}
         className="crankbait__back"
-        src={Back}
+        src={Images.BackIcon}
         alt="back"
       />
     </motion.section>

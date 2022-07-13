@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Hook from "../../assets/icons/hook.svg";
-import Spoon from "../../assets/icons/spoon.svg";
-import Jig from "../../assets/icons/duo-hook.svg";
-import Weight from "../../assets/icons/weight.svg";
+import Images from "../../assets/icons/index";
 import "./Tackle.scss";
 
 function Tackle() {
@@ -17,7 +14,7 @@ function Tackle() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="lures__link" to="/">
           <div className="tackle__button">
-            <img className="tackle__icon" src={Hook} alt="crankbait-icon" />
+            <img className="tackle__icon" src={Images.Hook} alt="crankbait-icon" />
           </div>
           <p className="tackle__subtitles">Hooks</p>
         </Link>
@@ -25,7 +22,7 @@ function Tackle() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="lures__link" to="/">
           <div className="tackle__button">
-            <img className="tackle__icon" src={Spoon} alt="crankbait-icon" />
+            <img className="tackle__icon" src={Images.Spoon} alt="crankbait-icon" />
           </div>
           <p className="tackle__subtitles">Spoons</p>
         </Link>
@@ -33,7 +30,7 @@ function Tackle() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="lures__link" to="/">
           <div className="tackle__button">
-            <img className="tackle__icon" src={Jig} alt="crankbait-icon" />
+            <img className="tackle__icon" src={Images.DuoHook} alt="crankbait-icon" />
           </div>
           <p className="tackle__subtitles">Jigs</p>
         </Link>
@@ -41,7 +38,7 @@ function Tackle() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="lures__link" to="/">
           <div className="tackle__button">
-            <img className="tackle__icon" src={Weight} alt="crankbait-icon" />
+            <img className="tackle__icon" src={Images.Weight} alt="crankbait-icon" />
           </div>
           <p className="tackle__subtitles">Weights</p>
         </Link>

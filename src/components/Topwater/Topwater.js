@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Popper from "../../assets/icons/popper-dark.svg";
-import Delete from "../../assets/icons/delete.svg";
-import Back from "../../assets/icons/back-icon.svg";
+import Images from "../../assets/icons/index";
 import { useHistory } from "react-router-dom";
 import { API_URL } from '../../config/index.js'
 import { motion } from "framer-motion";
@@ -49,7 +47,7 @@ function Topwater() {
     >
       <div className="topwater__top">
         <h1 className="topwater__title">Top Water</h1>
-        <img className="topwater__icon" src={Popper} alt="topwater icon" />
+        <img className="topwater__icon" src={Images.PopperDark} alt="topwater icon" />
       </div>
       <p>Topwater bait are also known as surface lures. These lures are often made from wood or plastic and are designed to float. In this category there are 3 popuplar types (poppers, walkers, and wobblers). These lures are cast out and retrieved slowly, some splash around to attract predators.</p>
       <div className="topwater__inv">
@@ -70,7 +68,7 @@ function Topwater() {
                     <li className="topwater__data">{item.target}</li>
                     <button className="topwater__delete" onClick={ () => deleteHandler(item.id)}>
                       <img
-                        src={Delete}
+                        src={Images.Delete}
                         alt="delete"
                       />
                     </button>
@@ -82,7 +80,7 @@ function Topwater() {
       <img
         onClick={backClick}
         className="topwater__back"
-        src={Back}
+        src={Images.BackIcon}
         alt="back"
       />
     </motion.section>

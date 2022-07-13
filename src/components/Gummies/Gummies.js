@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Gummy from "../../assets/icons/gummy_icon-dark.svg";
-import Delete from "../../assets/icons/delete.svg";
-import Back from "../../assets/icons/back-icon.svg";
+import Images from "../../assets/icons/index";
 import { useHistory } from "react-router-dom";
 import { API_URL } from '../../config/index.js'
 import { motion } from "framer-motion";
@@ -49,7 +47,7 @@ function Gummies() {
     >
       <div className="gummies__top">
         <h1 className="gummies__title">Soft Baits</h1>
-        <img className="gummies__icon" src={Gummy} alt="gummies icon" />
+        <img className="gummies__icon" src={Images.GummyDark} alt="gummies icon" />
       </div>
       <p>
         Soft bait are hybrid plastic lures made to look like worms and other
@@ -76,7 +74,7 @@ function Gummies() {
                   <li className="gummies__data">{item.target}</li>
                   <button className="gummies__delete" onClick={ () => deleteHandler(item.id)}>
                       <img
-                        src={Delete}
+                        src={Images.Delete}
                         alt="delete"
                       />
                     </button>
@@ -88,7 +86,7 @@ function Gummies() {
       <img
         onClick={backClick}
         className="gummies__back"
-        src={Back}
+        src={Images.BackIcon}
         alt="back"
       />
     </motion.section>

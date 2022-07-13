@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Crankbait from "../../assets/icons/crankbait.svg";
-import Hook from "../../assets/icons/hook.svg";
-import Rod from "../../assets/icons/rod.svg";
-import Knot from "../../assets/icons/knot_icon.svg";
+import Images from "../../assets/icons/index";
 import "./Dash.scss";
 
 function Dash() {
@@ -17,7 +14,7 @@ function Dash() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="dash__link" to="/lures">
           <div className="dash__button">
-            <img className="dash__icon" src={Crankbait} alt="crankbait-icon" />
+            <img className="dash__icon" src={Images.Crankbait} alt="crankbait-icon" />
           </div>
           <p className="dash__subtitles">Lures</p>
         </Link>
@@ -25,7 +22,7 @@ function Dash() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="dash__link" to="/tackle">
           <div className="dash__button">
-            <img className="dash__icon" src={Hook} alt="crankbait-icon" />
+            <img className="dash__icon" src={Images.Hook} alt="crankbait-icon" />
           </div>
           <p className="dash__subtitles">Tackle</p>
         </Link>
@@ -33,7 +30,7 @@ function Dash() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="dash__link" to="/rods">
           <div className="dash__button">
-            <img className="dash__icon" src={Rod} alt="crankbait-icon" />
+            <img className="dash__icon" src={Images.Rod} alt="crankbait-icon" />
           </div>
           <p className="dash__subtitles">Rods & Reels</p>
         </Link>
@@ -41,7 +38,7 @@ function Dash() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="dash__link" to="/">
           <div className="dash__button">
-            <img className="dash__icon" src={Knot} alt="crankbait-icon" />
+            <img className="dash__icon" src={Images.Knot} alt="crankbait-icon" />
           </div>
           <p className="dash__subtitles">Knots</p>
         </Link>

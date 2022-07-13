@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Add.scss";
-import { API_URL } from '../../config/index.js'
+import { API_URL } from '../../config/index.js';
 import axios from "axios";
 
 function Add() {

@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Crankbait from "../../assets/icons/crankbait.svg";
-import Gummy from "../../assets/icons/gummy_icon.svg";
-import Frog from "../../assets/icons/frog.svg";
-import Popper from "../../assets/icons/popper.svg";
+import Images from "../../assets/icons/index";
 import "./Lures.scss";
 
 function Lures() {
@@ -17,7 +14,7 @@ function Lures() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="lures__link" to="/crankbait">
           <div className="lures__button">
-            <img className="lures__icon" src={Crankbait} alt="crankbait-icon" />
+            <img className="lures__icon" src={Images.Crankbait} alt="crankbait-icon" />
           </div>
           <p className="lures__subtitles">Crankbait</p>
         </Link>
@@ -25,7 +22,7 @@ function Lures() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="lures__link" to="/softbait">
           <div className="lures__button">
-            <img className="lures__icon" src={Gummy} alt="crankbait-icon" />
+            <img className="lures__icon" src={Images.Gummy} alt="crankbait-icon" />
           </div>
           <p className="lures__subtitles">Soft Bait</p>
         </Link>
@@ -33,7 +30,7 @@ function Lures() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="lures__link" to="/topwater">
           <div className="lures__button">
-            <img className="lures__icon" src={Popper} alt="crankbait-icon" />
+            <img className="lures__icon" src={Images.Popper} alt="crankbait-icon" />
           </div>
           <p className="lures__subtitles">Top Water</p>
         </Link>
@@ -41,7 +38,7 @@ function Lures() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
         <Link className="lures__link" to="/frog">
           <div className="lures__button">
-            <img className="lures__icon" src={Frog} alt="crankbait-icon" />
+            <img className="lures__icon" src={Images.Frog} alt="crankbait-icon" />
           </div>
           <p className="lures__subtitles">Frogs</p>
         </Link>

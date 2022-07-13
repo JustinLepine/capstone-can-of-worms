@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FrogIcon from "../../assets/icons/frog-dark.svg";
-import Delete from "../../assets/icons/delete.svg";
-import Back from "../../assets/icons/back-icon.svg";
+import Images from "../../assets/icons/index";
 import { useHistory } from "react-router-dom";
 import { API_URL } from '../../config/index.js'
 import { motion } from "framer-motion";
@@ -49,7 +47,7 @@ function Frog() {
     >
       <div className="frog__top">
         <h1 className="frog__title">Frogs</h1>
-        <img className="frog__icon" src={FrogIcon} alt="frog icon" />
+        <img className="frog__icon" src={Images.FrogDark} alt="frog icon" />
       </div>
       <p>Frog lures can be considered topwater lures but mimic the typical frog and its movements. They float on the top of the water and can be skipped across lily pads. With hooks hidden inside of the soft plastic body this lure is sure to catch larger fish looking for a snack.</p>
       <div className="frog__inv">
@@ -70,7 +68,7 @@ function Frog() {
                   <li className="frog__data">{item.target}</li>
                   <button className="frog__delete" onClick={ () => deleteHandler(item.id)}>
                       <img
-                        src={Delete}
+                        src={Images.Delete}
                         alt="delete"
                       />
                     </button>
@@ -82,7 +80,7 @@ function Frog() {
       <img
         onClick={backClick}
         className="frog__back"
-        src={Back}
+        src={Images.BackIcon}
         alt="back"
       />
     </motion.section>

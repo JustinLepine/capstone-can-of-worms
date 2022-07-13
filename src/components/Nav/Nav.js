@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/icons/can_of_worms.svg";
-import Drop from "../../assets/icons/drop_down.svg";
+import Images from "../../assets/icons/index";
 import Dropdown from "../Dropdown/Dropdown";
 import "./Nav.scss";
 import { Link } from "react-router-dom";
@@ -15,13 +14,13 @@ function Nav() {
   return (
     <nav className="nav">
       <Link to="/">
-        <img className="nav__logo" src={Logo} alt="logo" />
+        <img className="nav__logo" src={Images.CanOfWorms} alt="logo" />
       </Link>
       <Link to="/">
         <h2 className="nav__title">Can of Worms.</h2>
       </Link>
       <div className="nav__drop-icon" onClick={onClick}>
-        <img className="nav__drop" src={Drop} alt="drop"></img>
+        <img className="nav__drop" src={Images.DropDown} alt="drop"></img>
         {showDrop && <Dropdown />}
       </div>
     </nav>
