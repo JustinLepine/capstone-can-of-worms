@@ -64,6 +64,13 @@ a {
     }
 
     &__drop {
+        transition: 0.4s;
+        right: 1rem;
         height: 3rem;
+        // position: absolute;
+        
+        @include tablet {
+            right: 3rem;
+        }
     }
 }

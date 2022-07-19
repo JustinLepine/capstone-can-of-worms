@@ -1,23 +1,19 @@
 const DropdownLinks = [
     {
         title: 'Home',
-        path: '/',
-        linkName: 'dropdown-link'
+        path: '/'
     },
     {
         title: 'Add',
-        path: '/add',
-        linkName: 'dropdown-link'
+        path: '/add'
     },
     {
         title: 'Lures',
-        path: '/lures',
-        linkName: 'dropdown-link'
+        path: '/lures'
     },
     {
         title: 'Crankbait',
-        path: '/crankbait',
-        linkName: 'dropdown-link'
+        path: '/crankbait'
     },
     {
         title: 'Soft Baits',
@@ -26,13 +22,11 @@ const DropdownLinks = [
     },
     {
         title: 'Topwater',
-        path: '/topwater',
-        linkName: 'dropdown-link'
+        path: '/topwater'
     },
     {
         title: 'Frogs',
-        path: '/frog',
-        linkName: 'dropdown-link'
+        path: '/frog'
     }
 ]
 
