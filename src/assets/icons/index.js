@@ -1,3 +1,4 @@
+import AddIcon from "./add-icon.svg";
 import BackIcon from "./back-icon.svg";
 import CanOfWorms from "./can_of_worms.svg";
 import CrankbaitDark from "./crankbait-dark.svg";
@@ -23,6 +24,7 @@ import Vest from "./vest.svg";
 import Weight from "./weight.svg";
 
 const Images = {
+    AddIcon,
     BackIcon,
     CanOfWorms,
     CrankbaitDark,

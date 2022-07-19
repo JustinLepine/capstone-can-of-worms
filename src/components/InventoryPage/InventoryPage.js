@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Images from "../../assets/icons/index";
 import { motion } from "framer-motion";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { API_URL } from '../../config/index.js'
 import InventorySections from "../InventoryPage/InventorySections";
 import './InventoryPage.scss'
@@ -51,7 +51,7 @@ function InventoryPage( props ) {
         <h1 className="inventory__title">{data[category].title}</h1>
         <img
           className="inventory__icon"
-          src={Images.CrankbaitDark}
+          src={data[category].logo}
           alt="crankbait icon"
         />
       </div>
@@ -83,12 +83,17 @@ function InventoryPage( props ) {
             })}
         </ul>
       </div>
-      <img
-        onClick={backClick}
-        className="inventory__back"
-        src={Images.BackIcon}
-        alt="back"
-      />
+      <div className="inventory__buttons">
+        <img
+          onClick={backClick}
+          className="inventory__back"
+          src={Images.BackIcon}
+          alt="back"
+          />
+        <Link to="/add">
+          <img className="inventory__add" src={Images.AddIcon} alt='add' />
+        </Link>
+      </div>      
     </motion.section>
   );
 }

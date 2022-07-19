@@ -56,8 +56,10 @@
     &__icon {
         height: 3rem;
         margin-right: 5%;
+        visibility: collapse;
         
         @include tablet {
+            visibility: visible;
             height: 5rem;
         }
     }
@@ -111,8 +113,22 @@
         margin-right: 0.8rem;
     }
 
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__back {
         height: 25px;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__add {
+        height: 40px;
     }
 }
 
