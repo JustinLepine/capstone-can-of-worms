@@ -1,20 +1,33 @@
-import { Nav, Dash, Lures, Tackle, InventoryPage, Rods, Add, Footer } from "./components/index"
+import { Nav, Dash, InventoryPage, Add, Footer } from "./components/index"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import DashList from "./components/Dash/DashList";
 import "./App.scss";
 
 function App() {
+  const data = DashList;
+  const maindash = data.filter((find) => find.category === 'maindash')
+  const sublures = data.filter((find) => find.category === 'sublures')
+  const subrods = data.filter((find) => find.category === 'subrods')
+  const subtackle = data.filter((find) => find.category === 'subtackle')
+
   return (
     <Router>
       <Nav />
       <AnimatePresence exitBeforeEnter>
         <Switch>
           <Route path="/" exact>
-            <Dash type={0}/>
+            <Dash maindash={maindash}/>
           </Route>
-          <Route path="/lures" component={Lures} />
-          <Route path="/tackle" component={Tackle} />
-          <Route path="/rods" component={Rods} />
+          <Route path="/lures">
+            <Dash maindash={sublures}/>
+          </Route>
+          <Route path="/tackle">
+            <Dash maindash={subtackle}/>
+          </Route>
+          <Route path="/rods">
+            <Dash maindash={subrods}/>
+          </Route>
           <Route path="/crankbait">
             <InventoryPage category={0}/>
           </Route>
