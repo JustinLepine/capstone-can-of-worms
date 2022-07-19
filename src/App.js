@@ -9,7 +9,9 @@ function App() {
       <Nav />
       <AnimatePresence exitBeforeEnter>
         <Switch>
-          <Route path="/" exact component={Dash} />
+          <Route path="/" exact>
+            <Dash type={0}/>
+          </Route>
           <Route path="/lures" component={Lures} />
           <Route path="/tackle" component={Tackle} />
           <Route path="/rods" component={Rods} />
