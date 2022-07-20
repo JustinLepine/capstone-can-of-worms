@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Images from "../../assets/icons/index";
 import Dropdown from "../Dropdown/Dropdown";
 import "./Nav.scss";
 import { Link } from "react-router-dom";
+import { useDropToggle } from "../../hooks/useDropToggle";
 
 function Nav() {
-  const [showDrop, setShowDrop] = useState(false);
-
-  const onClick = () => {
-    setShowDrop(!showDrop);
-  };
+  const { toggle: showDrop, toggleStatus: onClick } = useDropToggle();
 
   return (
     <nav className="nav">
