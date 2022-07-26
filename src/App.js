@@ -1,4 +1,4 @@
-import { Nav, Dash, InventoryPage, Add, Footer } from "./components/index"
+import { Nav, Dash, InventoryPage, Add, Login, Footer } from "./components/index"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import DashList from "./components/Dash/DashList";
@@ -41,6 +41,7 @@ function App() {
             <InventoryPage category={3}/>
           </Route>
           <Route path="/add" component={Add} />
+          <Route path="/login" component={Login} />
         </Switch>
       </AnimatePresence>
       <Footer />
