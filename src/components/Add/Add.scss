@@ -3,5 +3,15 @@
 @use "../../styles/typography" as *;
 
 .add {
-    @include form-styles
+    @include form-styles;
+
+    &__radio {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__radio-label {
+        margin-top: 0.07rem;
+        font-size: 0.9rem;
+    }
 }

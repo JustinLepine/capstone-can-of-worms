@@ -8,6 +8,10 @@ const DropdownLinks = [
         path: '/add'
     },
     {
+        title: 'Login',
+        path: '/login'
+    },
+    {
         title: 'Lures',
         path: '/lures'
     },

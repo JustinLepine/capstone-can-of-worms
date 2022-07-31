@@ -3,5 +3,19 @@
 @use "../../styles/typography" as *;
 
 .login {
- @include form-styles
+    @include form-styles;
+
+    &__switch {
+        background-color: $dark-shades;
+        color: $light-shades;
+        padding: 0.3rem 1rem;
+        border-radius: .8rem;
+        display: flex;
+        margin: 1rem auto;
+        transition: 0.4s;
+
+        &:hover {
+            background-color: $dark-accent;
+        }
+    }
 }

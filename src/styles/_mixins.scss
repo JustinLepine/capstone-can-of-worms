@@ -248,14 +248,4 @@
     &__button:hover {
         background-color: $dark-accent;
     }
-
-    &__radio {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__radio-label {
-        margin-top: 0.07rem;
-        font-size: 0.9rem;
-    }
 }
