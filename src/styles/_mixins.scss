@@ -179,3 +179,83 @@
         margin: 1rem 0 0;
     }
 }
+
+@mixin form-styles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 2rem;
+    color: $dark-shades;
+    min-height: calc(100vh - 12.2rem);
+
+    &__title {
+        color: $light-shades;
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        font-family: $font-lora;
+    }
+
+    &__form {
+        background-color: $light-shades;
+        border-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+        padding-top: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        min-width: 15rem;
+        margin-bottom: 2rem;
+        transition-duration: 0.4s;
+        font-family: $font-karla;
+
+        @include tablet {
+            min-width: 25rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.1rem;
+    }
+
+    &__input {
+        resize: none;
+        border: 1px solid $dark-accent;
+        border-radius: 5px;
+        padding: 0.8rem;
+    }
+
+    &__button-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: 10rem;
+        color: $light-shades;
+        padding: 0.8rem 2rem;
+        background-color: $main;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 30px;
+        display: flex;
+        transition-duration: 0.4s;
+    }
+
+    &__button:hover {
+        background-color: $dark-accent;
+    }
+
+    &__radio {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__radio-label {
+        margin-top: 0.07rem;
+        font-size: 0.9rem;
+    }
+}
