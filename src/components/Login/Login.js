@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useState } from 'react';
 import { API_URL } from '../../config/index.js';
-import "./Login.scss"
+import "./Login.scss";
 
 const Login = () => {
     const [isSignup, setIsSignup] = useState(true);
@@ -16,7 +16,12 @@ const Login = () => {
     };
 
   return (
-    <motion.section className="login">
+    <motion.section className="login"
+    initial={{y: '100%'}}
+    transition={{duration: 0.4}}
+    animate={{y: 0}}
+    exit={{y: '100%'}}
+    >
         <h1 className="login__title">{isSignup ? 'Create User' : 'Login'}</h1>
         <form id="form" className="login__form">
             <h5 className="login__subtitle">USERNAME</h5>
@@ -25,9 +30,9 @@ const Login = () => {
             <input type="password" placeholder="Enter password" className="login__input" name="password" required></input>
             {isSignup && (<>
                 <h5 className="login__subtitle">CONFIRM PASSWORD</h5>
-                <input type="password" placeholder="Enter password" className="login__input" name="confirmPassword" required></input>
+                <input type="password" placeholder="Confirm password" className="login__input" name="confirmPassword" required></input>
                 <h5 className="login__subtitle">EMAIL</h5>
-                <input type="email" placeholder="Confirm password" className="login__input" name="email" required></input>
+                <input type="email" placeholder="Enter Email" className="login__input" name="email" required></input>
             </>)}
             <div className="login__button-box">
                 <button type="button" onClick={resetInputField} className="login__button">CLEAR</button>
